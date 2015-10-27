@@ -1,2 +1,5 @@
 //search for number of times a product has a voice limit
 db.products.find({"limits.voice.n": {$gte: 0}}).count()
+
+//update limits.sms.over_rate to 0.01
+db.products.update({"_id": ObjectId("507d95d5719dbef170f15c00")},{$set : {"limits.sms.over_rate":0.01}})
