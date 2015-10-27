@@ -1,0 +1,2 @@
+//search for number of times a product has a voice limit
+db.products.find({"limits.voice.n": {$gte: 0}}).count()
